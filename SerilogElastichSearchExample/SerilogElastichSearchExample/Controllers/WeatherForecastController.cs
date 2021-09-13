@@ -26,6 +26,7 @@ namespace SerilogElastichSearchExample.Controllers
         [HttpGet]
         public IEnumerable<WeatherForecast> Get()
         {
+            _logger.LogError("Custom Exception Logger is here!");
             var rng = new Random();
             return Enumerable.Range(1, 5).Select(index => new WeatherForecast
             {
